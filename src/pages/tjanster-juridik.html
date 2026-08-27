@@ -1,5 +1,5 @@
                 <!-- SI BREADCUMB AREA -->
-                <section class="si-breadcumb-area" style="background: url(/assets/img/breadcumb/bg.jpg);">
+                <section class="si-breadcumb-area">
                     <div class="container container-1617">
                         <div class="row">
                             <div class="col-lg-12">
@@ -11,11 +11,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="si-breadcumb-shape">
-                        <img src="/assets/img/breadcumb/shape.png" alt="" loading="lazy" width="200" height="200">
-                    </div>
-                </section>
+                    </div>                </section>
 
                 <!-- SI SERVICE DETAILS AREA -->
                 <section class="si-service-details-area">
@@ -24,13 +20,21 @@
                             <div class="col-lg-12">
                                 <div class="si-service-details-box">
                                     <div class="si-service-details-thumb">
-                                        <img src="/assets/img/service-details/service-d-2.jpg" alt="Digital juridisk rådgivning för företag" loading="eager" width="1200" height="600">
+                                        <img src="/assets/img/placeholder.svg" alt="Digital juridisk rådgivning för företag" loading="eager" width="1200" height="600">
                                     </div>
                                     <div class="si-service-details-text">
                                         <span>SAMARBETSPARTNER</span>
                                         <h1>En extra trygghet för er verksamhet</h1>
                                         <p>Genom vår samarbetspartner <strong>Effektiv Juridik &amp; Rådgivning</strong> kan vi erbjuda er digital juridisk rådgivning utan krångel och höga timarvoden. Tjänsten riktar sig särskilt till enskilda firmor och mindre till medelstora företag som vill ha juridiskt stöd utan att behöva en egen jurist.</p>
                                         <p class="si-mt">Effektiv Juridik erbjuder tre nivåer av juridiska paket (8, 12 eller 24 timmar per år) som bland annat inkluderar avtalsgranskning, arbetsrättslig rådgivning, kreditupplysningar och digital avtalssignering — allt med fokus på struktur, trygghet och kontroll.</p>
+                                    </div>
+                                    <div class="si-service-details-thumb-main">
+                                        <div class="si-service-details-thumb2">
+                                            <img src="/assets/img/placeholder.svg" alt="Avtalsgranskning hos Effektiv Juridik" loading="lazy" width="500" height="400">
+                                        </div>
+                                        <div class="si-service-details-thumb3">
+                                            <img src="/assets/img/placeholder.svg" alt="Juridisk rådgivning för mindre företag" loading="lazy" width="500" height="400">
+                                        </div>
                                     </div>
 
                                     <div class="si-service-details-main">
@@ -65,9 +69,24 @@
                                         <div class="si-service-details-from">
                                             <h3>Vill ni komma igång?</h3>
                                             <p style="color:var(--si-common-text-body);font-size:14px;margin-bottom:16px;">Berätta vad ni behöver hjälp med så kopplar vi ihop er med rätt kontakt.</p>
-                                            <div class="si-service-details-btn">
-                                                <a class="si-btn-one" href="/kontakt"> <span class="btn-text"> <span>Kontakta oss</span> </span> <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span></a>
-                                            </div>
+                                            <form id="contact-form" name="contact" novalidate>
+                                                <input type="hidden" name="subject" value="Effektiv Juridik">
+                                                <input type="text" class="si-form-hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+                                                <div class="si-field">
+                                                    <label class="visually-hidden" for="mf-name">Namn</label>
+                                                    <input type="text" id="mf-name" name="name" placeholder="Ditt namn" autocomplete="name" required>
+                                                </div>
+                                                <div class="si-field">
+                                                    <label class="visually-hidden" for="mf-email">E-post</label>
+                                                    <input type="email" id="mf-email" name="email" placeholder="Din e-post" autocomplete="email" required>
+                                                </div>
+                                                <div class="si-field">
+                                                    <label class="visually-hidden" for="mf-message">Meddelande</label>
+                                                    <textarea id="mf-message" name="message" placeholder="Skriv ett meddelande" required></textarea>
+                                                </div>
+                                                <button class="si-btn-one si-submit-btn" type="submit"> <span class="btn-text"> <span>Skicka</span> </span> <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span></button>
+                                                <div id="contact-form-status" class="si-form-status" role="status" aria-live="polite"></div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

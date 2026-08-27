@@ -4,3 +4,6 @@ public/
 .env
 .env.*
 .DS_Store
+.vercel
+.env*
+.claude/

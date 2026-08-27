@@ -1,5 +1,5 @@
                 <!-- SI BREADCUMB AREA -->
-                <section class="si-breadcumb-area" style="background: url(/assets/img/breadcumb/bg.jpg);">
+                <section class="si-breadcumb-area">
                     <div class="container container-1617">
                         <div class="row">
                             <div class="col-lg-12">
@@ -11,11 +11,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="si-breadcumb-shape">
-                        <img src="/assets/img/breadcumb/shape.png" alt="" loading="lazy" width="200" height="200">
-                    </div>
-                </section>
+                    </div>                </section>
 
                 <!-- SI SERVICE DETAILS AREA -->
                 <section class="si-service-details-area">
@@ -24,13 +20,21 @@
                             <div class="col-lg-12">
                                 <div class="si-service-details-box">
                                     <div class="si-service-details-thumb">
-                                        <img src="/assets/img/service-details/service-d-3.jpg" alt="Digital signering av avtal med BankID" loading="eager" width="1200" height="600">
+                                        <img src="/assets/img/placeholder.svg" alt="Digital signering av avtal med BankID" loading="eager" width="1200" height="600">
                                     </div>
                                     <div class="si-service-details-text">
                                         <span>BYGGT I SVERIGE, FÖR SVENSKA FÖRETAG</span>
                                         <h1>Offerter och avtal, signerade på minuter</h1>
                                         <p><strong>Signello</strong> är en digital plattform för att skapa, skicka och signera offerter och avtal — helt utan att skriva ut, skanna eller vänta på papperspost. Era kunder signerar juridiskt bindande med BankID, direkt i mobilen eller datorn.</p>
                                         <p class="si-mt">Ni ser i realtid när ett dokument öppnas, läses och signeras, och kan följa upp affären utan att gissa. Signello byggs och drivs i Sverige, med bankstandardkryptering och GDPR-efterlevnad som grund.</p>
+                                    </div>
+                                    <div class="si-service-details-thumb-main">
+                                        <div class="si-service-details-thumb2">
+                                            <img src="/assets/img/placeholder.svg" alt="Offert skapad i Signello" loading="lazy" width="500" height="400">
+                                        </div>
+                                        <div class="si-service-details-thumb3">
+                                            <img src="/assets/img/placeholder.svg" alt="Signering med BankID i Signello" loading="lazy" width="500" height="400">
+                                        </div>
                                     </div>
 
                                     <div class="si-service-details-main">
@@ -65,9 +69,24 @@
                                         <div class="si-service-details-from">
                                             <h3>Vill ni testa Signello?</h3>
                                             <p style="color:var(--si-common-text-body);font-size:14px;margin-bottom:16px;">Hör av er så visar vi hur det fungerar för just er verksamhet.</p>
-                                            <div class="si-service-details-btn">
-                                                <a class="si-btn-one" href="/kontakt"> <span class="btn-text"> <span>Kontakta oss</span> </span> <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span></a>
-                                            </div>
+                                            <form id="contact-form" name="contact" novalidate>
+                                                <input type="hidden" name="subject" value="Signello">
+                                                <input type="text" class="si-form-hp" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+                                                <div class="si-field">
+                                                    <label class="visually-hidden" for="mf-name">Namn</label>
+                                                    <input type="text" id="mf-name" name="name" placeholder="Ditt namn" autocomplete="name" required>
+                                                </div>
+                                                <div class="si-field">
+                                                    <label class="visually-hidden" for="mf-email">E-post</label>
+                                                    <input type="email" id="mf-email" name="email" placeholder="Din e-post" autocomplete="email" required>
+                                                </div>
+                                                <div class="si-field">
+                                                    <label class="visually-hidden" for="mf-message">Meddelande</label>
+                                                    <textarea id="mf-message" name="message" placeholder="Skriv ett meddelande" required></textarea>
+                                                </div>
+                                                <button class="si-btn-one si-submit-btn" type="submit"> <span class="btn-text"> <span>Skicka</span> </span> <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span></button>
+                                                <div id="contact-form-status" class="si-form-status" role="status" aria-live="polite"></div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

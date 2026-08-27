@@ -4,6 +4,21 @@
    components (bento grid, text logo, forms, carousels) look native.
    ========================================================================== */
 
+/* --- Dark gradient backgrounds -------------------------------------------
+   The template's shipped hero/breadcrumb/testimonial/footer photography
+   (assets/img/hero, breadcumb, testimonial, footer *.jpg) are unlicensed
+   placeholder files (flat gray + printed dimensions), not usable stock
+   photos — replaced here with a themed gradient until real photography is
+   supplied. service/bg3.jpg is a genuine abstract pattern and is kept as-is
+   elsewhere. ------------------------------------------------------------- */
+.si-hero-3-area,
+.si-breadcumb-area,
+.si-testimonial-3-area,
+.si-testimonial-3-box,
+.si-footer-area {
+  background: linear-gradient(135deg, #171717 0%, #232323 55%, #0B6E4F 150%);
+}
+
 /* --- Skip link (accessibility) ------------------------------------------ */
 .si-skip-link {
   position: absolute;
@@ -182,6 +197,30 @@ a.si-bento-item:hover {
 .si-tool-pill i {
   font-size: 16px;
   color: var(--si-theme-secondary);
+}
+
+/* --- Testimonial cards (Reco.se) -----------------------------------------
+   The theme's name label is rotated -90deg into a fixed-width left gutter
+   sized for very short two-word demo names ("Saad Alam") — real reviewer
+   names ("Christoffer Björn-Erik S.") overflow and clip in that layout.
+   Reset it to a normal horizontal block under the quote instead. --------- */
+.si-testimonial-3-box2 {
+  padding-left: 51px;
+}
+.si-testimonial-3-title {
+  margin-top: 20px;
+  transform: none;
+  position: static;
+  top: auto;
+  left: auto;
+}
+.si-testimonial-3-title h4 {
+  font-size: 20px;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+.si-testimonial-3-icon::before {
+  display: none;
 }
 
 /* --- Testimonial cards (Reco.se) ----------------------------------------- */
