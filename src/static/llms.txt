@@ -1,0 +1,18 @@
+# Effektiv Media AB
+
+> Digitalbyrå i Borås som förenklar företagande och ökar synlighet online genom webbutveckling, SEO, betald annonsering och digitala verktyg — allt in-house, inga underleverantörer. Vi arbetar rikstäckande i hela Sverige.
+
+## Tjänster
+- [SEO & Landningssidor](https://effektivmedia.nu/tjanster-seo-landningssidor): Sökmotoroptimering och konverterande landningssidor.
+- [Hemsida](https://effektivmedia.nu/tjanster-hemsida): Design och utveckling av företagshemsidor i WordPress.
+- [E-handel via Shopify](https://effektivmedia.nu/tjanster-e-handel-shopify): Uppbyggnad av Shopify-butiker.
+- [Betald annonsering (Google & Meta)](https://effektivmedia.nu/tjanster-annonsering): Kampanjhantering på Google Ads och Meta Ads.
+- [Effektiv Juridik](https://effektivmedia.nu/tjanster-juridik): Digital juridisk rådgivning via samarbetspartner.
+- [Signello](https://effektivmedia.nu/tjanster-signello): Digitala offerter och avtal med BankID-signering.
+- [Stampello](https://effektivmedia.nu/tjanster-stampello): Digitala stämpel- och lojalitetskort.
+
+## Företaget
+- [Om Effektiv Media](https://effektivmedia.nu/om-oss): Företagets bakgrund, filosofi och meriter.
+- [Leadsportalen](https://effektivmedia.nu/leadsportalen): Kundportal för leads och SEO-ranking i realtid.
+- [Alla tjänster](https://effektivmedia.nu/tjanster): Översikt över samtliga tjänster.
+- [Kontakt](https://effektivmedia.nu/kontakt): Viaredsvägen 32, 504 62 Borås. Telefon 010 182 25 90. E-post hej@effektivmedia.nu. Öppettider mån–tors 08:30–16:30, fre 09:00–15:00.

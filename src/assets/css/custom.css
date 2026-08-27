@@ -1,0 +1,359 @@
+/* ==========================================================================
+   custom.css — Effektiv Media additions on top of the Averix theme.
+   Loaded after main.css; reuses the same var(--si-*) design tokens so new
+   components (bento grid, text logo, forms, carousels) look native.
+   ========================================================================== */
+
+/* --- Skip link (accessibility) ------------------------------------------ */
+.si-skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  z-index: 10000;
+  background: var(--si-common-white);
+  color: var(--si-common-black);
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.si-skip-link:focus {
+  top: 12px;
+  color: var(--si-common-black);
+}
+
+/* --- Text logo (placeholder until a real logo file is supplied) --------- */
+.si-text-logo {
+  display: inline-block;
+  font-family: var(--si-ff-heading);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--si-common-white);
+  text-decoration: none;
+}
+.si-text-logo span {
+  color: var(--si-theme-secondary);
+}
+.si-text-logo-dark {
+  color: var(--si-common-black);
+}
+.si-offcanvas-logo .si-text-logo {
+  font-size: 22px;
+}
+.si-footer-logo .si-text-logo {
+  font-size: 26px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* --- Bento grid ----------------------------------------------------------- */
+.si-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.si-bento-item {
+  position: relative;
+  border-radius: 20px;
+  padding: 36px;
+  background: var(--si-common-surface);
+  border: 1px solid var(--si-border-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+a.si-bento-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--si-theme-secondary);
+}
+.si-bento-item--dark {
+  background: var(--si-common-black);
+  color: var(--si-common-white);
+  border-color: var(--si-common-black-3);
+}
+.si-bento-item--wide { grid-column: span 2; }
+.si-bento-item--tall { grid-row: span 2; }
+.si-bento-item--feature { grid-column: span 2; grid-row: span 2; }
+
+.si-bento-item .si-bento-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--si-common-white);
+  border: 1px solid var(--si-border-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--si-theme-secondary);
+}
+.si-bento-item--dark .si-bento-icon {
+  background: var(--si-common-black-2);
+  border-color: var(--si-common-black-3);
+}
+.si-bento-item h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+.si-bento-item p {
+  margin: 0;
+  color: var(--si-common-text-body);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.si-bento-item--dark p {
+  color: rgba(255, 255, 255, 0.72);
+}
+.si-bento-item .si-bento-arrow {
+  align-self: flex-end;
+  font-size: 14px;
+  color: var(--si-theme-secondary);
+}
+
+.si-bento-stat-value {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font-family: var(--si-ff-heading);
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--si-common-black);
+}
+.si-bento-item--dark .si-bento-stat-value {
+  color: var(--si-common-white);
+}
+.si-bento-stat-value span {
+  font-size: 22px;
+  color: var(--si-theme-secondary);
+}
+.si-bento-stat-label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--si-common-text-body);
+}
+.si-bento-item--dark .si-bento-stat-label {
+  color: rgba(255, 255, 255, 0.65);
+}
+.si-bento-note {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--si-common-text-body);
+}
+
+@media (max-width: 991px) {
+  .si-bento-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 575px) {
+  .si-bento-grid { grid-template-columns: 1fr; }
+  .si-bento-item--wide,
+  .si-bento-item--feature { grid-column: span 1; }
+}
+
+/* --- Tools / partner logo strip ------------------------------------------ */
+.si-tool-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 14px 18px;
+  padding: 8px 0;
+}
+.si-tool-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid var(--si-border-7);
+  background: var(--si-common-surface);
+  color: var(--si-common-black);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.si-tool-pill i {
+  font-size: 16px;
+  color: var(--si-theme-secondary);
+}
+
+/* --- Testimonial cards (Reco.se) ----------------------------------------- */
+.si-reco-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--si-common-text-body);
+  margin-top: 14px;
+}
+.si-reco-badge a {
+  color: var(--si-theme-secondary);
+  text-decoration: underline;
+}
+.si-stars {
+  color: var(--si-theme-secondary);
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+/* --- Accessible form ------------------------------------------------------ */
+.si-field {
+  margin-bottom: 22px;
+}
+.si-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--si-common-black);
+}
+.si-field input,
+.si-field select,
+.si-field textarea {
+  width: 100%;
+  border: 1px solid var(--si-border-7);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-family: var(--si-ff-body);
+  font-size: 15px;
+  background: var(--si-common-white);
+  color: var(--si-common-black);
+}
+.si-field input:focus,
+.si-field select:focus,
+.si-field textarea:focus {
+  outline: 2px solid var(--si-theme-secondary);
+  outline-offset: 1px;
+}
+.si-field textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.si-form-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.si-form-status {
+  margin-top: 16px;
+  font-size: 14px;
+  border-radius: 8px;
+  padding: 12px 16px;
+  display: none;
+}
+.si-form-status.is-visible { display: block; }
+.si-form-status.is-success {
+  background: rgba(11, 110, 79, 0.1);
+  color: #0B6E4F;
+}
+.si-form-status.is-error {
+  background: rgba(216, 34, 33, 0.1);
+  color: #b3231f;
+}
+.si-submit-btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* --- Breadcrumb banner title: some pages promote this to h1 (their only
+   heading above the fold), others keep it h2 when a later section owns the
+   page's real h1 — both need the theme's breadcrumb-title styling. -------- */
+.si-breadcumb-text h1 {
+  font-size: 100px;
+  line-height: 100px;
+  color: var(--si-common-white);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .si-breadcumb-text h1 { font-size: 70px; line-height: 90px; }
+}
+@media (max-width: 991px) {
+  .si-breadcumb-text h1 { font-size: 55px; line-height: 70px; margin-top: 40px; }
+}
+@media only screen and (min-width: 350px) and (max-width: 575px) {
+  .si-breadcumb-text h1 { font-size: 40px; }
+}
+
+/* --- "1 tak" stat badge: demoted from h1 to h3 (it's a decorative stat
+   callout, not the page's heading) — carries the theme's circular badge
+   styling across to h3. ----------------------------------------------------- */
+.si-about-main h3.si-about-stat-badge {
+  font-size: 16px;
+  background: var(--si-common-gray);
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: -35px;
+  margin-bottom: 16px;
+}
+
+/* --- Footer CTA heading: demoted from theme's h1 to h2 so every page keeps a
+   single semantic h1; carries the same theme sizing across breakpoints. ----- */
+.si-footer-text h2 {
+  font-weight: 600;
+  font-size: 160px;
+  line-height: 170px;
+  color: var(--si-common-white);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .si-footer-text h2 { font-size: 130px; line-height: 145px; }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .si-footer-text h2 { font-size: 100px; line-height: 120px; }
+}
+@media (max-width: 991px) {
+  .si-footer-text h2 { font-size: 80px; line-height: 100px; }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .si-footer-text h2 { font-size: 58px; line-height: 70px; }
+}
+@media only screen and (min-width: 350px) and (max-width: 575px) {
+  .si-footer-text h2 { font-size: 35px; line-height: 50px; }
+}
+.si-footer-text h2 span {
+  margin-left: 30%;
+  font-weight: 500;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .si-footer-text h2 span { margin-left: 17%; }
+}
+@media (max-width: 991px) {
+  .si-footer-text h2 span { margin-left: 0%; }
+}
+
+/* --- Misc content helpers -------------------------------------------------- */
+.si-inline-icon-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.si-inline-icon-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  color: var(--si-common-text-body);
+}
+.si-inline-icon-list i {
+  color: var(--si-theme-secondary);
+  margin-top: 4px;
+}
+.si-partner-callout {
+  border: 1px solid var(--si-border-7);
+  border-radius: 16px;
+  padding: 28px 32px;
+  background: var(--si-common-surface);
+  margin: 32px 0;
+}
+.si-partner-callout a.si-btn-one { margin-top: 12px; }

@@ -1,0 +1,69 @@
+
+// font url
+$font-url: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap';
+
+
+// General Font
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Light.woff2') format('woff2'),
+  url('../fonts/GeneralSans-Light.woff') format('woff'),
+  url('../fonts/GeneralSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
+  url('../fonts/GeneralSans-Regular.woff') format('woff'),
+  url('../fonts/GeneralSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Medium.woff2') format('woff2'),
+  url('../fonts/GeneralSans-Medium.woff') format('woff'),
+  url('../fonts/GeneralSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Semibold.woff2') format('woff2'),
+  url('../fonts/GeneralSans-Semibold.woff') format('woff'),
+  url('../fonts/GeneralSans-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../fonts/GeneralSans-Bold.woff2') format('woff2'),
+  url('../fonts/GeneralSans-Bold.woff') format('woff'),
+  url('../fonts/GeneralSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "Inter",
+        'heading': "GeneralSans",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+// font size
+$font-size: (
+    'fz': (
+        'body': 14px,
+        'p': 16px,
+    )
+);
