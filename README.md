@@ -44,6 +44,14 @@ Sidan använder just nu Averix-mallens platshållarbilder (gråa boxar med
 mått, t.ex. "1920x1000") som platshållare för struktur och layout. Dessa
 ska bytas ut mot riktiga foton/bilder innan lansering.
 
+## Innan lansering på riktig domän
+
+`vercel.json` sätter just nu `X-Robots-Tag: noindex` på alla sidor så att
+`effektiv-media-web.vercel.app` inte indexeras av Google medan sajten är
+under uppbyggnad. **Ta bort den `headers`-blocket i `vercel.json` när ni är
+redo att gå live på `effektivmedia.nu`**, annars blockeras hela sajten från
+sökmotorer även på den riktiga domänen.
+
 ## Domän
 
 `vercel.json` har `cleanUrls: true`, vilket gör att `/kontakt.html` redirectar
