@@ -236,6 +236,7 @@ a.si-bento-item:hover {
    scrolling in a seamless CSS marquee — the track's logo list is duplicated
    once in the markup and animated -50% so the loop has no visible seam. --- */
 .si-logo-marquee {
+  display: flex;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
