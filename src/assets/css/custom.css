@@ -17,10 +17,18 @@
 .si-footer-area {
   background: linear-gradient(135deg, #171717 0%, #232323 55%, #C2622B 150%);
 }
-.si-hero-3-area {
+.si-hero-2-area {
   background:
-    linear-gradient(135deg, rgba(15, 15, 15, 0.88) 0%, rgba(15, 15, 15, 0.82) 55%, rgba(194, 98, 43, 0.75) 150%),
+    linear-gradient(0deg, rgba(15, 15, 15, 0.75) 0%, rgba(15, 15, 15, 0.3) 45%, rgba(15, 15, 15, 0.55) 100%),
     url("/assets/img/stock/hero-office.jpg") center / cover no-repeat;
+}
+.si-hero-2-text h1 {
+  font-size: clamp(40px, 5.5vw, 92px);
+  line-height: 1.1;
+}
+@media (max-width: 991px) {
+  .si-hero-2-main { gap: 24px; }
+  .si-hero-2-text2 p { margin-top: 16px !important; }
 }
 
 /* --- Hero (home) -----------------------------------------------------------
@@ -235,26 +243,36 @@ a.si-bento-item:hover {
 .si-logo-track {
   display: flex;
   align-items: center;
-  gap: 72px;
+  gap: 20px;
   width: max-content;
-  animation: si-marquee 26s linear infinite;
+  animation: si-marquee 30s linear infinite;
 }
 .si-logo-marquee:hover .si-logo-track {
   animation-play-state: paused;
 }
-.si-logo-track img {
-  height: 34px;
-  width: auto;
-  max-width: 150px;
-  object-fit: contain;
-  opacity: 0.7;
-  filter: grayscale(100%);
-  transition: opacity 0.2s ease, filter 0.2s ease;
+.si-logo-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 76px;
+  padding: 16px 22px;
+  background: var(--si-common-white);
+  border: 1px solid var(--si-border-7);
+  border-radius: 16px;
   flex-shrink: 0;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
-.si-logo-track img:hover {
-  opacity: 1;
-  filter: grayscale(0%);
+.si-logo-chip:hover {
+  border-color: var(--si-theme-secondary);
+  transform: translateY(-2px);
+}
+.si-logo-chip img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 @keyframes si-marquee {
   from { transform: translateX(0); }
@@ -262,6 +280,92 @@ a.si-bento-item:hover {
 }
 @media (prefers-reduced-motion: reduce) {
   .si-logo-track { animation: none; }
+}
+
+/* --- Rotating circular text badge -----------------------------------------
+   The theme's version (si-testimonial-shape) uses a pre-rendered raster
+   image (shape-text.png) with English text baked into the pixels, so it
+   can't be relabeled. Rebuilt as an inline SVG textPath instead — real,
+   selectable text we can set per page, animated with the theme's own
+   .rotate2 easing (10s linear). ------------------------------------------- */
+.si-rotating-badge {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: var(--si-common-white);
+  border: 1px solid var(--si-border-7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.si-rotating-badge svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotate2 16s infinite linear;
+}
+.si-rotating-badge svg text {
+  font-family: var(--si-ff-heading);
+  font-size: 12.5px;
+  letter-spacing: 2px;
+  fill: var(--si-common-black);
+}
+.si-rotating-badge-icon {
+  font-size: 44px;
+  line-height: 1;
+  color: var(--si-theme-secondary);
+}
+@media (max-width: 767px) {
+  .si-rotating-badge { width: 200px; height: 200px; }
+}
+
+/* --- Numbered service list: theme sizes this for single short words (WEB
+   DESIGN, MARKETING) at 120px — our two-word Swedish titles (SEO &
+   LANDNINGSSIDOR, E-HANDEL VIA SHOPIFY) ran the full box width at that
+   size, squeezing the description into a sliver that read as overlap. --- */
+.si-service-2-text {
+  max-width: 60%;
+}
+.si-service-2-text h3 {
+  font-size: 56px !important;
+  line-height: 1.15 !important;
+}
+.si-service-2-p {
+  margin-top: 0 !important;
+  max-width: 380px;
+}
+.si-service-2-p p {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+@media (max-width: 991px) {
+  .si-service-2-text { max-width: 100%; }
+}
+
+/* --- Trust badge cards (reusing .si-blog-box's card shell without a photo) */
+.si-trust-card {
+  width: 260px;
+  padding: 32px 28px;
+  vertical-align: top;
+}
+.si-trust-card .si-bento-icon {
+  margin-bottom: 20px;
+}
+.si-trust-card h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.si-trust-card p {
+  color: var(--si-common-text-body);
+  font-size: 14px;
+  margin: 0;
+}
+@media (max-width: 991px) {
+  .si-trust-card { width: 100%; margin-bottom: 20px; }
 }
 
 /* --- Testimonial cards (Reco.se) -----------------------------------------
