@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    {{> title-meta title="Sidan hittades inte | Effektiv Media" description="Sidan du sökte kunde inte hittas." canonical="https://effektivmedia.nu/404" ogImage="https://effektivmedia.nu/images/stock/hero-office.jpg" }}
+    <meta name="robots" content="noindex,follow">
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    {{> navbar }}
+
+    <main id="main-content">
+    <section class="relative bg-white lg:py-50 py-25">
+        <div class="container">
+            <div class="relative z-10 bg-white w-150 mx-auto border border-default-300 rounded overflow-hidden">
+                <div class="lg:p-15 p-10 text-center flex flex-col gap-5">
+                    <h1 class="lg:text-6xl text-4xl">404</h1>
+
+                    <h2 class="lg:text-3xl text-2xl">Sidan hittades inte</h2>
+
+                    <p class="text-default-600 mb-4">Sidan ni sökte kunde tyvärr inte hittas. Den kan ha flyttats eller så har adressen skrivits fel.</p>
+
+                    <div class="grid">
+                        <a href="/" class="group py-5 px-10 inline-flex items-center justify-center gap-5 rounded-lg bg-primary font-medium text-white transition-all">
+                            <span class="relative block overflow-hidden">
+                                <span class="block group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                                    Till startsidan
+                                </span>
+                                <span class="absolute top-7 inset-s-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                                    Till startsidan
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    {{> footer }}
+
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    {{> title-meta title="Kontakta Oss | Effektiv Media" description="Boka en kostnadsfri analys, en demo eller kom igång med en ny tjänst. Effektiv Media finns på Viaredsvägen 32 i Borås och arbetar rikstäckande." canonical="https://effektivmedia.nu/kontakt" ogImage="https://effektivmedia.nu/images/stock/hero-office.jpg" }}
+
+    {{> head-css}}
+</head>
+
+<body>
+
+    {{> navbar }}
+
+    <main id="main-content">
+
+    <section class="relative size-full overflow-hidden md:py-14.5 py-10">
+
+        <div class="container">
+            <h1 class="mb-15 lg:text-[56px] md:text-5xl text-4xl text-default-950">Boka en demo, analys — eller säg hej</h1>
+
+            <div class="grid lg:grid-cols-5 lg:gap-17.5 md:gap-12.5 gap-7.5">
+                <div class="lg:col-span-3">
+
+                    <div class="mb-10">Vare sig ni vill boka en kostnadsfri analys av er nuvarande hemsida, se en demo, eller redan vet vilken tjänst ni vill köpa — fyll i formuläret så hör vi av oss inom en arbetsdag.</div>
+
+                    <form id="contact-form" name="contact" novalidate>
+                        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="sr-only">
+
+                        <div class="grid md:grid-cols-2 gap-7.5 mb-7.5">
+                            <div>
+                                <label for="name" class="mb-1.5 text-sm block">Ditt namn*</label>
+                                <input type="text" id="name" name="name" required autocomplete="name" class="rounded-lg bg-default-100 h-11.25 py-2 px-5 w-full flex items-center border-transparent focus:border-default-200">
+                            </div>
+
+                            <div>
+                                <label for="email" class="mb-1.5 text-sm block">E-postadress*</label>
+                                <input type="email" id="email" name="email" required autocomplete="email" class="rounded-lg bg-default-100 h-11.25 py-2 px-5 w-full flex items-center border-transparent focus:border-default-200">
+                            </div>
+
+                            <div>
+                                <label for="phone" class="mb-1.5 text-sm block">Telefonnummer</label>
+                                <input type="tel" id="phone" name="phone" autocomplete="tel" class="rounded-lg bg-default-100 h-11.25 py-2 px-5 w-full flex items-center border-transparent focus:border-default-200">
+                            </div>
+
+                            <div>
+                                <label for="company" class="mb-1.5 text-sm block">Företag</label>
+                                <input type="text" id="company" name="company" autocomplete="organization" class="rounded-lg bg-default-100 h-11.25 py-2 px-5 w-full flex items-center border-transparent focus:border-default-200">
+                            </div>
+
+                            <div class="md:col-span-2">
+                                <label for="subject" class="mb-1.5 text-sm block">Vad gäller det?*</label>
+                                <select id="subject" name="subject" required class="rounded-lg bg-default-100 h-11.25 py-2 px-5 w-full flex items-center border-transparent focus:border-default-200">
+                                    <option value="">Välj ett alternativ</option>
+                                    <option value="Boka demo">Boka demo</option>
+                                    <option value="Analys av befintlig hemsida">Analys av befintlig hemsida</option>
+                                    <option value="Köpa produkt">Köpa produkt</option>
+                                    <option value="Annat">Annat</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-5">
+                            <label for="message" class="mb-1.5 text-sm block">Meddelande*</label>
+                            <textarea id="message" name="message" required class="rounded-lg bg-default-100 py-2 px-5 w-full flex items-center border-transparent focus:border-default-200" rows="8"></textarea>
+                        </div>
+
+                        <div id="contact-form-status" class="mb-5 text-sm hidden" role="status" aria-live="polite"></div>
+
+                        <div class="lg:-mb-14">
+                            <button type="submit" class="si-submit-btn group py-3.5 px-5 inline-flex items-center justify-center gap-5 rounded-lg bg-primary font-medium text-white transition-all">
+                                <span class="relative block overflow-hidden">
+                                    <span class="block group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                                        Skicka meddelande
+                                    </span>
+                                    <span class="absolute top-7 inset-s-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                                        Skicka meddelande
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+
+                <div class="lg:col-span-2">
+                    <div class="size-full rounded-lg overflow-hidden group">
+                        <img class="size-full rounded-lg object-cover group-hover:scale-105 transition-all duration-300" src="/images/stock/office-team-2.jpg" alt="Effektiv Medias team">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="lg:py-27.5 md:py-25 py-15">
+        <div class="container">
+
+            <div class="grid md:grid-cols-2 gap-5">
+                <div>
+                    <div class="relative rounded-xl overflow-hidden size-full">
+                        <iframe title="Effektiv Media på kartan, Viaredsvägen 32, Borås" src="https://www.google.com/maps?q=Viaredsv%C3%A4gen+32,+504+62+Bor%C3%A5s&output=embed" class="w-full h-full min-h-75 rounded-xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="border border-default-200 rounded-xl p-10 lg:py-20 h-full flex flex-col items-center text-center justify-center gap-8">
+
+                        <h4 class="lg:text-3xl text-2xl lg:max-w-4/5">Effektiv Media AB</h4>
+
+                        <p class="lg:max-w-2/5">Viaredsvägen 32, 504 62 Borås <br> Mån–tors 08:30–16:30, fre 09:00–15:00</p>
+
+                        <a href="mailto:hej@effektivmedia.nu" class="underline text-default-950 transition duration-300 hover:text-default-400">hej@effektivmedia.nu</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 bg-default-950 text-white rounded-xl lg:p-10 p-5">
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+
+                    <!-- Contact -->
+                    <div class="flex items-center gap-6 flex-wrap">
+
+                        <h3 class="md:text-2xl text-xl text-white">Kontakta oss:</h3>
+
+                        <a href="mailto:hej@effektivmedia.nu" class="text-white/80 hover:text-white transition">
+                            hej@effektivmedia.nu
+                        </a>
+
+                        <span class="hidden md:block w-px h-6 bg-white/30"></span>
+
+                        <a href="tel:0101822590" class="text-white/80 hover:text-white transition">
+                            010 182 25 90
+                        </a>
+
+                    </div>
+
+
+                    <!-- Social -->
+                    <div class="flex items-center gap-5">
+
+                        <h3 class="md:text-2xl text-xl text-white">Sociala medier:</h3>
+
+                        <div class="flex items-center gap-4">
+
+                            <a href="https://instagram.com" target="_blank" rel="noopener" class="text-default-400 transition duration-300 hover:-translate-y-1">
+                                <i class="iconify lucide--instagram size-5"></i>
+                            </a>
+
+                            <a href="https://facebook.com" target="_blank" rel="noopener" class="text-default-400 transition duration-300 hover:-translate-y-1">
+                                <i class="iconify lucide--facebook size-5"></i>
+                            </a>
+
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-default-400 transition duration-300 hover:-translate-y-1">
+                                <i class="iconify lucide--linkedin size-5"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="lg:pb-27.5 md:pb-25 pb-20">
+        <div class="container max-w-315!">
+            <div class="rounded-xl overflow-hidden bg-default-100 lg:p-17.5 p-8 text-center">
+                <h4 class="lg:text-3xl text-2xl mb-5">Hellre prata direkt?</h4>
+                <p class="mb-7.5">Ring 010 182 25 90 så hjälper vi er direkt.</p>
+                <a href="tel:0101822590" class="group py-4 px-8 inline-flex items-center justify-center rounded-lg bg-primary text-white font-medium transition-all">
+                    <span class="relative block overflow-hidden">
+                        <span class="block group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                            Ring oss
+                        </span>
+                        <span class="absolute top-7 inset-s-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
+                            Ring oss
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    {{> footer }}
+
+    <script>
+        (function () {
+            var form = document.getElementById('contact-form');
+            if (!form) return;
+            var statusEl = document.getElementById('contact-form-status');
+            var submitBtn = form.querySelector('.si-submit-btn');
+
+            function setStatus(message, ok) {
+                statusEl.textContent = message;
+                statusEl.className = 'mb-5 text-sm rounded-lg p-4 ' + (ok ? 'bg-primary/10 text-primary' : 'bg-red-50 text-red-600');
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (form.querySelector('[name="_gotcha"]').value) return;
+
+                var required = form.querySelectorAll('[required]');
+                for (var i = 0; i < required.length; i++) {
+                    if (!required[i].value.trim()) {
+                        setStatus('Fyll i alla obligatoriska fält innan du skickar.', false);
+                        required[i].focus();
+                        return;
+                    }
+                }
+
+                var data = Object.fromEntries(new FormData(form).entries());
+                if (submitBtn) submitBtn.setAttribute('disabled', 'disabled');
+                setStatus('Skickar...', true);
+
+                fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                })
+                    .then(function (res) { if (!res.ok) throw new Error('fail'); return res.json(); })
+                    .then(function () {
+                        setStatus('Tack! Vi hör av oss inom en arbetsdag.', true);
+                        form.reset();
+                    })
+                    .catch(function () {
+                        setStatus('Något gick fel. Ring oss gärna på 010 182 25 90 eller mejla hej@effektivmedia.nu istället.', false);
+                    })
+                    .finally(function () {
+                        if (submitBtn) submitBtn.removeAttribute('disabled');
+                    });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
